@@ -27,8 +27,8 @@ int main(void)
 						putchar(c + '0');
 						putchar(d + '0');
 
-						!(a == 9 && b == 8) && putchar(',');
-						!(a == 9 && b == 8) && putchar(' ');
+						!(a == 9 && b == 8) ? putchar(',') : putchar(0);
+						!(a == 9 && b == 8) ? putchar(' ') : putchar(0);
 					}
 					d++;
 				}
