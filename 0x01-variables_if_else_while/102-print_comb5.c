@@ -19,7 +19,7 @@ int main(void)
 			{
 				while (d < 10)
 				{
-					if (c >= a && d > b)
+					if (c >= a && d >= b)
 					{
 						putchar(a + '0');
 						putchar(b + '0');
