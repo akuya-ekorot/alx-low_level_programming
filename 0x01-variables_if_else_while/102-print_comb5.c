@@ -28,7 +28,10 @@ int main(void)
 					putchar(' ');
 				}
 			}
+			b++;
 		}
+	b = 0;
+	a++;
 	}
 	putchar('\n');
 	return (0);
