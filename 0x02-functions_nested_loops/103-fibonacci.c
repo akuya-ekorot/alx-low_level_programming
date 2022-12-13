@@ -12,7 +12,7 @@ void fibonacci_even_sum(void)
 
 	prev = 1;
 	curr = 2;
-	sum = 1;
+	sum = 0;
 
 	while (curr < 4000000)
 	{
