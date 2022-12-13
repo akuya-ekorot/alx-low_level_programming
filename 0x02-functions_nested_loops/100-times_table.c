@@ -10,9 +10,9 @@ void print_times_table(int n)
 
 	if (!(n > 15 || n < 0))
 	{
-		for (i = 0; i < 10; i++)
+		for (i = 0; i < n + 1; i++)
 		{
-			for (j = 0; j < 10; j++)
+			for (j = 0; j < n + 1; j++)
 			{
 				k = i * j;										/* current product in the times table */
 				l = i * (j + 1);							/* next product in the times table */
