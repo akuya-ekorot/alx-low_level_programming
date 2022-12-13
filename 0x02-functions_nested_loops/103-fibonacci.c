@@ -31,3 +31,14 @@ void fibonacci_even_sum(void)
 
 	printf("%ld\n", sum);
 }
+
+/**
+* main - starting point of program
+*
+* Return: Always 0 (success)
+*/
+int main(void)
+{
+	fibonacci_even_sum();
+	return (0);
+}
