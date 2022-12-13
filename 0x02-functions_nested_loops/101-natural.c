@@ -17,3 +17,14 @@ void sum_of_natural(void)
 	}
 	printf("%ld", sum);
 }
+
+/**
+* main - entry point to the program
+*
+* Return: Always 0 (Success)
+*/
+int main(void)
+{
+	sum_of_natural();
+	return (0);
+}
