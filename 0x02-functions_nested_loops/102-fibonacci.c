@@ -13,9 +13,9 @@ void fibonacci(void)
 
 	printf("%ld, ", prev);
 
-	for (count = 0; count < 50; count++)
+	for (count = 0; count < 49; count++)
 	{
-		if (count == 49)
+		if (count == 48)
 		{
 			printf("%ld\n", curr);
 		}
