@@ -7,29 +7,23 @@
 */
 void fibonacci_even_sum(void)
 {
-	long int prev, curr, count, temp, sum;
+	long long int prev, curr, count, temp;
+	long long int sum;
 
 	prev = 1;
 	curr = 2;
-	sum = prev;
+	sum = 1;
 
-
-	for (count = 0; count < 4000000; count++)
+	for (count = 0; curr < 4000000; count++)
 	{
-		if (count == 48)
-		{
+		if (curr % 2 == 0)
 			sum = sum + curr;
-		}
-		else
-		{
-			sum = sum + curr;
-		}
 		temp = curr;
 		curr = curr + prev;
 		prev = temp;
 	}
 
-	printf("%ld\n", sum);
+	printf("%lld\n", sum);
 }
 
 /**
