@@ -15,7 +15,7 @@ void sum_of_natural(void)
 		if ((i % 3) == 0 || (i % 5) == 0)
 			sum = sum + i;
 	}
-	printf("%ld", sum);
+	printf("%ld\n", sum);
 }
 
 /**
