@@ -8,8 +8,8 @@ void fibonacci(void)
 {
 	long int prev, curr, count, temp;
 
-	prev = 2;
-	curr = 3;
+	prev = 1;
+	curr = 2;
 
 	printf("%ld, ", prev);
 
