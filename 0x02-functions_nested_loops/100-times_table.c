@@ -14,24 +14,27 @@ void print_times_table(int n)
 		{
 			for (j = 0; j < n + 1; j++)
 			{
-				k = i * j;										/* current product in the times table */
-				l = i * (j + 1);							/* next product in the times table */
+				k = i * j;
+				l = i * (j + 1);
 
-				if (k > n)										/* print both digits of product */
+				if (k > 9)
+				{
+					if (k > 99)
+					{
+						_putchar((k / 100) + '0');
+					}
 					_putchar((k / 10) + '0');
+				}
 				_putchar((k % 10) + '0');
 
-				/* don't print trailing characters for the last product */
 				if (j != n)
 				{
 					_putchar(',');
 					_putchar(' ');
 
-					/* add an extra space if the next product is two digit */
 					if (l < 100)
 						_putchar(' ');
 
-					/* add an extra space if the next product is one digit */
 					if (l < 10)
 						_putchar(' ');
 				}
