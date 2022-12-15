@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
 * prime_factor - finds and prints the largest prime factor of
@@ -6,28 +7,21 @@
 */
 void prime_factor(void)
 {
-	unsigned long int factor, num, temp, i, j;
+	unsigned long int factor, num, i;
 
 	num = 612852475143;
-	temp = num;
 	factor = num;
-	j = 2;
 
-	for (i = 0; i < num / 2; i++)
+	for (i = 3; i <= sqrt(num); i = i + 2)
 	{
-
-		if (temp % j == 0)
+		while (num % i == 0)
 		{
-			factor = j;
-			temp = temp / j;
-		}
-		else
-		{
-			j++;
+			factor = i;
+			num = num / i;
 		}
 	}
 
-	printf("%ld", factor);
+	printf("%ld\n", factor);
 }
 
 /**
