@@ -10,8 +10,7 @@ void prime_factor(void)
 
 	num = 612852475143;
 	temp = num;
-
-	factor = 0;
+	factor = num;
 	j = 2;
 
 	for (i = 0; i < num / 2; i++)
@@ -24,7 +23,7 @@ void prime_factor(void)
 		}
 		else
 		{
-			j = j + 1;
+			j++;
 		}
 	}
 
