@@ -10,7 +10,8 @@
 */
 int _atoi(char *s)
 {
-	int sign, n, i;
+	int sign, i;
+	unsigned int n;
 
 	sign = 1;
 	n = 0;
