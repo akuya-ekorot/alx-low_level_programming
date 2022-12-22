@@ -8,18 +8,18 @@
 */
 char *rot13(char *s)
 {
-	int i;
+	int i, j;
+	char *letter = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *encode = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		/* encode first 13 characters in the alphabet */
-		if ((s[i] >= 'a' && s[i] <= 'm') || (s[i] >= 'A' && s[i] <= 'M'))
-		{
-			s[i] = s[i] + 13;
-			continue;
-		}
-		else if ((s[i] >= 'n' && s[i] <= 'z') || (s[i] >= 'N' && s[i] <= 'Z'))
-			s[i] = s[i] - 13;
+		for (j = 0; *(letter + j) != '\0'; j++)
+			if (*(s + i) == *(letter + j))
+			{
+				*(s + i) = *(encode + j);
+				break;
+			}
 	}
 
 	return (s);
