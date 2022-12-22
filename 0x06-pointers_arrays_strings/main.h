@@ -8,3 +8,4 @@ char *string_toupper(char *);
 char *cap_string(char *);
 void reverse_array(int *a, int n);
 char *leet(char *);
+char *rot13(char *);
