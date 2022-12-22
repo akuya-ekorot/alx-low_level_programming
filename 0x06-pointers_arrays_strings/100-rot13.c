@@ -18,9 +18,7 @@ char *rot13(char *s)
 			s[i] = s[i] + 13;
 			continue;
 		}
-
-		/* encode last 13 characters in the alphabet */
-		if ((s[i] >= 'n' && s[i] <= 'z') || (s[i] >= 'N' && s[i] <= 'Z'))
+		else if ((s[i] >= 'n' && s[i] <= 'z') || (s[i] >= 'N' && s[i] <= 'Z'))
 			s[i] = s[i] - 13;
 	}
 
