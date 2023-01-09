@@ -11,7 +11,7 @@
 */
 int main(int argc, char **argv)
 {
-	if (argc == 3)
+	if (argc == 3 && (*argv[1] > '0' && *argv[2] < '9'))
 		printf("%d\n", (*argv[1] - '0') * (*argv[2] - '0'));
 	else
 	{
