@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - multiplies two numbers
@@ -10,16 +11,13 @@
 */
 int main(int argc, char **argv)
 {
-	int i;
-	char *c = "Error";
-
 	if (argc == 3)
-		_putchar(((*argv[1]) * (*argv[2])));
+		printf("%d\n", (*argv[1] - '0') * (*argv[2] - '0'));
 	else
-		for (i = 0; *(c + i) != '\0'; i++)
-			_putchar(*(c + i));
-
-	_putchar('\n');
+	{
+		printf("Error\n");
+		return (1);
+	}
 
 	return (0);
 }
