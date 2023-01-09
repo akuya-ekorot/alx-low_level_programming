@@ -57,17 +57,15 @@ int main(int argc, char **argv)
 {
 	int coins, change;
 
-	change = atoi(*(argv + 1));
-
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
 
-	if (change < 0)
-		printf("%d\n", 0);
-	else
+	change = atoi(*(argv + 1));
+
+	if (change >= 0)
 	{
 		coins = get_coins(change);
 		printf("%d\n", coins);
