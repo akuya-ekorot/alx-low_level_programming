@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 	char *c = "Error";
 
 	if (argc == 3)
-		_putchar(((*argv[1] - '0') * (*argv[2] - '0')) + '0');
+		_putchar(((*argv[1]) * (*argv[2])));
 	else
 		for (i = 0; *(c + i) != '\0'; i++)
 			_putchar(*(c + i));
