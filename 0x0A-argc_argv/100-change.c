@@ -55,21 +55,12 @@ int get_coins(int change)
 */
 int main(int argc, char **argv)
 {
-	int coins, change, j;
+	int coins, change;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
-	}
-
-	for (j = 0; *(*(argv + 1) + j) != '\0' && *(*(argv + 1) + j) != '\0'; j++)
-	{
-		if (!(*(*(argv + 1) + j) >= '0' && *(*(argv + 1) + j) <= '9'))
-		{
-			printf("Error\n");
-			return (1);
-		}
 	}
 
 	change = atoi(*(argv + 1));
