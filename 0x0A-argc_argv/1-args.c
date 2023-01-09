@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - prints the program's name
+ * main - prints the number of arguments
  *
  * @argc: no of arguements in @argv
  * @argv: array of pointers to command line arguements
