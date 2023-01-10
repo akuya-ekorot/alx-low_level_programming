@@ -65,11 +65,13 @@ int main(int argc, char **argv)
 
 	change = atoi(*(argv + 1));
 
-	if (change >= 0)
+	if (change > 0)
 	{
 		coins = get_coins(change);
 		printf("%d\n", coins);
 	}
+	else
+		printf("%d\n", 0);
 
 	return (0);
 }
