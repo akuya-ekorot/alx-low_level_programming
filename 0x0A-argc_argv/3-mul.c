@@ -44,11 +44,12 @@ int main(int argc, char **argv)
 {
 	int i, j;
 
-	i = _atoi(*(argv + 1));
-	j = _atoi(*(argv + 2));
-
 	if (argc == 3)
+	{
+		i = _atoi(*(argv + 1));
+		j = _atoi(*(argv + 2));
 		printf("%d\n", i * j);
+	}
 	else
 	{
 		printf("Error\n");
