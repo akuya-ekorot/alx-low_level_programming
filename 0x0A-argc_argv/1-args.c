@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - prints the number of arguments
@@ -10,8 +11,6 @@
 */
 int main(int argc, __attribute__((unused)) char **argv)
 {
-	_putchar((argc - 1) + '0');
-	_putchar('\n');
-
+	printf("%d\n", argc - 1);
 	return (0);
 }
