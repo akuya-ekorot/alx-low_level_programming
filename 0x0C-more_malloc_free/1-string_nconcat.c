@@ -51,7 +51,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, size, j;
 	char *str;
 
-	if (s1 != NULL || *s1 != '\0')
+	if (s1 != NULL && *s1 != '\0')
 	{
 		i = _strlen(s1);
 		size = n + i + 1;
