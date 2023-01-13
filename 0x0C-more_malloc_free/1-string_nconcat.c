@@ -74,7 +74,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s2 != NULL)
 	{
-		for (j = 0; i < size && *(s2 + j) != '\0'; j++, i++)
+		for (j = 0; i < size - 1 && *(s2 + j) != '\0'; j++, i++)
 			*(str + i) = *(s2 + j);
 	}
 
