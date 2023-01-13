@@ -30,8 +30,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 
 	/* copy contents of ptr to p */
-	for (i = 0; i < old_size; i++)
-		*((char *)(ptr) + i) = *(p + i);
+	if (ptr != NULL)
+	{
+		for (i = 0; i < old_size; i++)
+			*((char *)(ptr) + i) = *(p + i);
+	}
 
 	free(ptr);
 
