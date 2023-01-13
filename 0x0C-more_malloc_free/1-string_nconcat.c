@@ -32,7 +32,6 @@ unsigned int _strlen(char *s)
 
 	for (i = 0; *(s + i) != '\0'; i++)
 		j++;
-	j++;
 
 	return (j);
 }
@@ -54,13 +53,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s1 != NULL)
 	{
-		i = _strlen(s1) - 1;
-		size = n + _strlen(s1);
+		i = _strlen(s1);
+		size = n + i + 1;
 		str = malloc(sizeof(char) * size);
-		str = _strcpy(str, s1);
 
 		if (str == NULL)
 			return (NULL);
+
+		str = _strcpy(str, s1);
 	}
 	else
 	{
@@ -74,7 +74,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (s2 != NULL)
 	{
-		for (j = 0; j + i < size && *(s2 + j) != '\0'; j++, i++)
+		for (j = 0; i < size && *(s2 + j) != '\0'; j++, i++)
 			*(str + i) = *(s2 + j);
 	}
 
