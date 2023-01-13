@@ -21,9 +21,9 @@ char *_strcpy(char *dest, char *src)
 
 /**
 * _strlen - finds length of a string
-* 
+*
 * @s: string to check
-* 
+*
 * Return: unsigned int, length of string
 */
 unsigned int _strlen(char *s)
