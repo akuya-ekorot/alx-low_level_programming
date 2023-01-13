@@ -52,17 +52,31 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, size, j;
 	char *str;
 
-	i = _strlen(s1) - 1;
-	size = n + _strlen(s1);
-	str = malloc(sizeof(char) * size);
+	if (s1 != NULL)
+	{
+		i = _strlen(s1) - 1;
+		size = n + _strlen(s1);
+		str = malloc(sizeof(char) * size);
+		str = _strcpy(str, s1);
 
-	if (str == NULL)
-		return (NULL);
+		if (str == NULL)
+			return (NULL);
+	}
+	else
+	{
+		i = 0;
+		size = n;
+		str = malloc(sizeof(char) * size);
 
-	str = _strcpy(str, s1);
+		if (str == NULL)
+			return (NULL);
+	}
 
-	for (j = 0; j + i < size && *(s2 + j) != '\0'; j++, i++)
-		*(str + i) = *(s2 + j);
+	if (s2 != NULL)
+	{
+		for (j = 0; j + i < size && *(s2 + j) != '\0'; j++, i++)
+			*(str + i) = *(s2 + j);
+	}
 
 	return (str);
 }
