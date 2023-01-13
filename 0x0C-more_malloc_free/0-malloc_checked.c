@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* allocates memory using malloc
+* malloc_checked - allocates memory using malloc
 *
 * @b: unsigned int. Size of memory to allocate
 *
@@ -14,9 +14,7 @@ void *malloc_checked(unsigned int b)
 	ptr = malloc(b);
 
 	if (ptr == NULL)
-	{
-		exit (98);
-	}
+		exit(98);
 
 	return (ptr);
 }
