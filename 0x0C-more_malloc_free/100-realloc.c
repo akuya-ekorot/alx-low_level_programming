@@ -29,7 +29,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (p == NULL)
 		return (NULL);
 
-	/* copy contents of ptr to p */
+	/* copy contents of ptr to p if ptr is not null */
 	if (ptr != NULL)
 	{
 		for (i = 0; i < old_size; i++)
