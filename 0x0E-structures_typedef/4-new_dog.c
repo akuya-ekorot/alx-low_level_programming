@@ -11,7 +11,6 @@ int _strlen(char *s)
 	int i, len;
 
 	len = 0;
-
 	for (i = 0; *(s + i) != '\0'; i++)
 		len++;
 	return (len);
@@ -49,12 +48,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
 
-	if (name == NULL || owner == NULL)
-		return (NULL);
-
 	dog = malloc(sizeof(dog_t));
 
-	if (dog == NULL)
+	if (dog == NULL || name == NULL || owner == NULL)
 		return (NULL);
 
 	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
