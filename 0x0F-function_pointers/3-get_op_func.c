@@ -19,7 +19,7 @@ f get_op_func(char *s)
 		{NULL, NULL}
 	};
 
-	while(ops[i].op != NULL)
+	while (ops[i].op != NULL)
 	{
 		if (*s == *(ops[i].op))
 			return (ops[i].f);
