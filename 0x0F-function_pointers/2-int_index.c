@@ -13,7 +13,7 @@ return 0. If no element matches, return -1. if size <= 0, return -1
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i, idx;
-	
+
 	if (size <= 0)
 		return (-1);
 
