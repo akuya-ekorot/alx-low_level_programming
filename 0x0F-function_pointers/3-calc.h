@@ -7,7 +7,7 @@
 typedef int (*f)(int a, int b);
 
 /**
- * struc op - Struc op
+ * struct op - Struc op
  *
  * @op: The operator
  * @f: The function associated
