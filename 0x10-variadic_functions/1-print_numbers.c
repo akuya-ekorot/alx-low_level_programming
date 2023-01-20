@@ -41,26 +41,41 @@ void print_numbers(const char *separator, const unsigned int n, ...)
  */
 void _printnum(int n)
 {
+	int place;
+	
 	if (n < 0)
 	{
 		_putchar('-');
 		n = n * -1;
 	}
 
-	if (n > 999 && n < 10000)
+	place = count_place(n);
+
+	_putchar((n / place) + '0');
+
+	if (place > 1)
 	{
-		_putchar((n / 1000) % 10 + '0');
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
+		if (n % place >= place / 10)
+			_printnum(n % place);
+		else
+		{
+			_putchar('0');
+			_printnum(n % (place / 10));
+		}
+		
 	}
-	else if (n > 99 && n < 1000)
-	{
-		_putchar((n / 100) % 10 + '0');
-		_putchar((n / 10) % 10 + '0');
-	}
-	else if (n > 9 && n < 100)
-	{
-		_putchar((n / 10) % 10 + '0');
-	}
-	_putchar(n % 10 + '0');
+
+}
+
+/**
+ * count_place - finds the decimal places in the number
+ * @n: int, number to find decimal places for
+ *
+ * Return: number of places in the number
+ */
+int count_place(int n)
+{
+	if (n < 10)
+		return (1);
+	return (10 * count_place(n / 10));
 }
