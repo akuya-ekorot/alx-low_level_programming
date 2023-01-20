@@ -42,17 +42,14 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 void _printnum(int n)
 {
 	int place;
-	
+
 	if (n < 0)
 	{
 		_putchar('-');
 		n = n * -1;
 	}
-
 	place = count_place(n);
-
 	_putchar((n / place) + '0');
-
 	if (place > 1)
 	{
 		if (n % place >= place / 10)
@@ -62,9 +59,7 @@ void _printnum(int n)
 			_putchar('0');
 			_printnum(n % (place / 10));
 		}
-		
 	}
-
 }
 
 /**
