@@ -7,7 +7,7 @@
  *
  * Return: pointer to the appropriate operation function
 */
-int ((*get_op_func(char *s))(int, int))
+int (*get_op_func(char *s))(int a, int b)
 {
 	int i;
 	op_t ops[] = {
