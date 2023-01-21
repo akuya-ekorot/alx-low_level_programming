@@ -10,7 +10,7 @@
 */
 int main(int argc, char *argv[])
 {
-	f op_func;
+	int (*op_func)(int, int);
 	int ans;
 
 	if (argc == 4 && get_op_func(argv[2]))
