@@ -14,7 +14,10 @@ int main(int argc, char *argv[])
 	int ans;
 
 	if (argc != 4)
+	{
 		printf("Error\n");
+		return (0);
+	}
 
 	op_func = get_op_func(argv[2]);
 
