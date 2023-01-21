@@ -13,22 +13,15 @@ int main(int argc, char *argv[])
 	f op_func;
 	int ans;
 
-	if (argc != 4)
+	if (argc == 4 && get_op_func(argv[2]))
 	{
-		printf("Error\n");
+		op_func = get_op_func(argv[2]);
+		ans = op_func(atoi(argv[1]), atoi(argv[3]));
+
+		printf("%d\n", ans);
 		return (0);
 	}
 
-	op_func = get_op_func(argv[2]);
-
-	if (op_func == NULL)
-	{
-		printf("Error\n");
-		return (0);
-	}
-
-	ans = op_func(atoi(argv[1]), atoi(argv[3]));
-
-	printf("%d\n", ans);
+	printf("Error\n");
 	return (0);
 }
