@@ -10,7 +10,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int mask;
 
-	mask = 0x80000000u;
+	mask = 0x8000000000000000;
 
 	while (mask != 0 && (n & mask) == 0)
 		mask >>= 1;
