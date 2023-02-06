@@ -1,2 +1,5 @@
 .ccl*
 .vscode
+**/_putchar.c
+**/tests
+**/a.out
