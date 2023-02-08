@@ -17,7 +17,7 @@ void write_file(char *filename, File_t *file)
 	int fd;
 
 	fd = open(filename, O_WRONLY | O_CREAT,
-			  S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+			  S_IRUSR | S_IRGRP | S_IROTH | S_IWUSR | S_IWGRP);
 
 	write(fd, file->content, file->length);
 
@@ -71,6 +71,7 @@ int main(int argc, char **argv)
 	file = read_file(file_from);
 	write_file(file_to, file);
 
+	free(file->content);
 	free(file);
 	return (0);
 }
