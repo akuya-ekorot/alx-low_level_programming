@@ -3,13 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define BUFF 1024
-
-typedef struct File_s
-{
-	char *content;
-	size_t length;
-} File_t;
+#include "main.h"
 
 /**
  * write_file - writes to a file
@@ -22,7 +16,8 @@ void write_file(char *filename, File_t *file)
 {
 	int fd;
 
-	fd = open(filename, O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	fd = open(filename, O_WRONLY | O_CREAT,
+			  S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 
 	write(fd, file->content, file->length);
 
