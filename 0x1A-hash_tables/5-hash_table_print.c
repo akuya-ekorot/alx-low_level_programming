@@ -26,7 +26,7 @@ void hash_table_print(const hash_table_t *ht)
 			{
 				if (found)
 					printf(", ");
-				
+
 				printf("'%s': '%s'", curr->key, curr->value);
 
 				if (!found)
