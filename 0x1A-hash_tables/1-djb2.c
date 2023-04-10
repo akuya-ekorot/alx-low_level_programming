@@ -4,7 +4,7 @@
  * hash_djb2 - djb2 algo to generate hash
  * @str: string to use for the algo
  *
- * Return: hash
+ * Return: the hash
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
