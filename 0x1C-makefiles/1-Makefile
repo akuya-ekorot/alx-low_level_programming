@@ -5,7 +5,7 @@
 #	variables: CC, SRC
 
 CC := gcc
-SRC := *.c
+SRC := $(wildcard *.c)
 
 all:
 	${CC} ${SRC} -o school
