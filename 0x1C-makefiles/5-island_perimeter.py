@@ -24,8 +24,8 @@ def island_perimeter(grid):
     # okay Morpheus, lol 😅
     # this also helps in identifying if there is a piece of land in the grid
     loop = True
-    for i in range(1, len(grid) - 1):
-        for j in range(1, len(grid[0]) - 1):
+    for i in range(0, len(grid)):
+        for j in range(0, len(grid[i])):
             if grid[i][j] == 1:
                 loop = False
                 break
@@ -75,17 +75,17 @@ def walk(grid, start, curr, perimeter, seen):
         }
 
         # base cases
-        # if next cell is out of bound
-        if next["y"] < 0 or next["y"] >= len(grid) or next["x"] < 0 or next["x"] >= len(grid[0]):
-            return perimeter
+        # # if next cell is not out of the map
+        if not (next["y"] < 0 or next["y"] >= len(grid) or
+           next["x"] < 0 or next["x"] >= len(grid[0])):
 
-        # if next cell is water add one to the perimeter
-        if not grid[next["y"]][next["x"]]:
-            perimeter += 1
+            # if next cell is water add one to the perimeter
+            if not grid[next["y"]][next["x"]]:
+                perimeter += 1
 
-        # only recurse if there's land and we've not seen it
-        if grid[next["y"]][next["x"]] and next not in seen:
-            perimeter = walk(grid, start, next, perimeter, seen)
+            # only recurse if there's land and we've not seen it
+            if grid[next["y"]][next["x"]] and next not in seen:
+                perimeter = walk(grid, start, next, perimeter, seen)
 
     # finally, what we came here for
     return perimeter
