@@ -47,7 +47,10 @@ def island_perimeter(grid):
 
     # now we pass the grid, start, curr, perimeter and seen to the recursive fn
     # over to you in the studio
-    return walk(grid, start, curr, 0, seen)
+    try:
+        return walk(grid, start, curr, 0, seen)
+    except Exception:
+        return 0
 
 
 def walk(grid, start, curr, perimeter, seen):
@@ -86,6 +89,8 @@ def walk(grid, start, curr, perimeter, seen):
             # only recurse if there's land and we've not seen it
             if grid[next["y"]][next["x"]] and next not in seen:
                 perimeter = walk(grid, start, next, perimeter, seen)
+        else:
+            raise Exception
 
     # finally, what we came here for
     return perimeter
